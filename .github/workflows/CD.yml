@@ -15,7 +15,7 @@ jobs:
       - name: Pull Docker Image
         env: 
           DOCKER_USER: ${{ secrets.DOCKER_USER_NAME }}
-        run: sudo docker pull $DOCKER_USER/laptop-sales-model-fastapi:latest
+        run: sudo docker pull aman01ymca/laptop-sales-model-fastapi:latest
     
       - name: Delete Old Docker Container
         run: sudo docker rm -f laptop-sales-fastapi-container || true
@@ -23,4 +23,4 @@ jobs:
       - name: Run Docker Container
         env: 
           DOCKER_USER: ${{ secrets.DOCKER_USER_NAME }}
-        run: sudo docker run -it -d -p 8001:8001 --name laptop-sales-fastapi-container $DOCKER_USER/laptop-sales-model-fastapi:latest
+        run: sudo docker run -it -d -p 8001:8001 --name laptop-sales-fastapi-container aman01ymca/laptop-sales-model-fastapi:latest
