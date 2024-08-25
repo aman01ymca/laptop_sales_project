@@ -1,0 +1,41 @@
+# Package Overview
+package_name: laptop_sales_model
+
+# Data Files
+training_data_file: laptop_sales.csv
+
+# Variables
+# The variable we are attempting to predict (Price)
+target: Price
+
+pipeline_name: laptop_sales_model
+pipeline_save_file: laptop_sales_model_output_v
+
+# Features that will go inside processing pipeline
+features:
+  - Make
+  - Colour
+  - Usage (Hours)
+  - USB Ports
+
+
+# Features names
+
+make_var: Make
+color_var: Colour
+usage_var: Usage (Hours)
+port_var: USB Ports
+
+
+
+
+  
+# Set train/test split
+test_size: 0.20
+
+# Set the random seed
+random_state: 42
+
+# Alogrithm parameters
+n_estimators: 50
+max_depth: 8

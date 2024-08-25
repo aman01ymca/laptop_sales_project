@@ -1,0 +1,18 @@
+include *.txt
+include *.md
+include *.pkl
+recursive-include ./laptop_sales_model *
+
+include laptop_sales_model/datasets/laptop_sales.csv 
+include laptop_sales_model/datasets/test.csv
+include laptop_sales_model/trained_models/*.pkl
+include laptop_sales_model/VERSION
+include laptop_sales_model/config.yml
+
+include ./requirements/requirements.txt
+include ./requirements/test_requirements.txt
+exclude *.log
+exclude *.cfg
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
