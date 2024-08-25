@@ -141,4 +141,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: $DOCKER_USER/laptop-sales-model-fastapi:latest
+          tags: aman01ymca/laptop-sales-model-fastapi:latest
